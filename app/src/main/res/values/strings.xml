@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BloQuery</string>
+
+
+    <!-- Strings related to BloQuery login activity -->
+
+
 </resources>
