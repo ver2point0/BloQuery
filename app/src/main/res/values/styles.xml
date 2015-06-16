@@ -6,7 +6,7 @@
         <item name="android:windowBackground">@color/primary_light</item>
     </style>
 
-    <style name="Login">
+    <style name="Login" parent="android:Widget.TextView">
         <item name="android:textColor">@color/text_icons</item>
         <item name="android:textSize">30sp</item>
         <item name="robotoFont">Light</item>
@@ -14,13 +14,13 @@
 
     <style name="EmailPassword">
         <item name="android:textColor">@color/text_icons</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="robotoFont">Light</item>
     </style>
 
     <style name="SignUp">
         <item name="android:textColor">@color/text_icons</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="robotoFont">Light</item>
     </style>
 
