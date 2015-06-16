@@ -1,8 +1,11 @@
 <resources>
+
     <string name="app_name">BloQuery</string>
 
-
     <!-- Strings related to BloQuery login activity -->
-
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_up">Sign Up</string>
 
 </resources>
