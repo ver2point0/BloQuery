@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material">
+
+        <!-- Main theme colors -->
+
+        <!-- Branding color -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <!-- Darker variant of colorPrimary -->
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <!-- Theme UI controls like checkboxes and text fields -->
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/primary_light</item>
+
+    </style>
+</resources>
