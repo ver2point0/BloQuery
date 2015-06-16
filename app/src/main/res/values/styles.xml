@@ -5,6 +5,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Window Background -->
         <item name="android:windowBackground">@color/primary_light</item>
+
     </style>
 
 
