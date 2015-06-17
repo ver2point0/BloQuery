@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Window Background -->
         <item name="android:windowBackground">@color/primary_light</item>
         <item name="colorControlNormal">@color/text_icons</item>
