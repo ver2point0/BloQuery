@@ -1,10 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <!-- Add layouts & colors. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Window Background -->
+        <item name="android:windowBackground">@color/primary_light</item>
+        <item name="colorControlNormal">@color/text_icons</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+    </style>
 
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:typeface">monospace</item>
+    </style>
+    <style name="AutoCompleteTextViewStyle" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:typeface">monospace</item>
+    </style>
+    <style name="EditTextStyle" parent="android:Widget.EditText">
+        <item name="android:typeface">monospace</item>
     </style>
 
 </resources>
