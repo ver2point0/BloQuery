@@ -7,8 +7,6 @@ public class BloQueryApplication extends Application {
     /*
     * Add one time initializations in this application class like Parse user API
     * */
-
-
     @Override
     public void onCreate() {
     }
