@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 import com.ver2point0.android.blocquery.R;
 
 /*
@@ -75,7 +76,21 @@ public class BloQueryActivity extends Activity {
                 if (mUserName.equals("") && mPassword.equals("")) {
                     Toast.makeText(getApplicationContext(), getString(R.string.complete_signup_form), Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getApplicationContext(), getString(R.string.signup_error), Toast.LENGTH_SHORT).show();
+                    // save new user data into parse.com
+                    ParseUser parseUser = new ParseUser();
+                    parseUser.setUsername(mUserName);
+                    parseUser.setPassword(mPassword);
+                    parseUser.signUpInBackground(new SignUpCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null) {
+                                // show successful login
+                                Toast.makeText(getApplicationContext(), getString(R.string.successful_login), Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), getString(R.string.signup_error), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
                 }
             }
         });
