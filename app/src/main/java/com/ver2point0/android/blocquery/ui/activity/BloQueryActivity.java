@@ -27,6 +27,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.parse.ParseObject;
 import com.ver2point0.android.blocquery.R;
 
 import java.util.ArrayList;
@@ -52,6 +53,11 @@ public class BloQueryActivity extends Activity implements LoaderCallbacks<Cursor
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloquery);
+
+        // Testing Parse SDK
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
 
         mEmailTextView = (AutoCompleteTextView) findViewById(R.id.actv_email);
         loadAutoComplete();
