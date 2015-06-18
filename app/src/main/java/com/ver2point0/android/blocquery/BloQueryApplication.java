@@ -3,13 +3,21 @@ package com.ver2point0.android.blocquery;
 import android.app.Application;
 
 import com.parse.Parse;
+import com.parse.ParseACL;
+import com.parse.ParseUser;
 
 public class BloQueryApplication extends Application {
 
     @Override
     public void onCreate() {
-        // Enable Parse Local DataStore
-        Parse.enableLocalDatastore(this);
+        super.onCreate();
+
+        // Parse initialization
         Parse.initialize(this, "KbF3oiduq4h9bsIBfycOW5pS5pXWfFyJvdOaTx71", "VEWWrRR4pk35VY1eXFYr0WPuky4kQ8RziMIlI8QS");
+
+        ParseUser.enableAutomaticUser();
+        ParseACL defaultACL = new ParseACL();
+
+        ParseACL.setDefaultACL(defaultACL, true);
     }
 }

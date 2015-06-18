@@ -3,13 +3,9 @@
     <string name="app_name">BloQuery</string>
 
     <!-- Strings related to BloQuery login activity -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_login">Login</string>
-    <string name="action_sign_up">Sign Up</string>
-    <string name="invalid_email">This email address is invalid</string>
-    <string name="invalid_password">Password is too short</string>
-    <string name="incorrect_password">Password is incorrect</string>
-    <string name="field_required">This field is required</string>
+    <string name="login_success">Successfully Logged in</string>
+    <string name="user_not_exist">No such user exist, please signup</string>
+    <string name="complete_signup_form">Please complete the sign up form</string>
+    <string name="signup_error">Sign up Error</string>
 
 </resources>
