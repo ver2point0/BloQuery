@@ -7,5 +7,10 @@
     <string name="user_not_exist">No such user exist, please signup</string>
     <string name="complete_signup_form">Please complete the sign up form</string>
     <string name="signup_error">Sign up Error</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_username">Username</string>
+    <string name="logged_out">"Logged out"</string>
+    <string name="logout">Log Out</string>
+    <string name="greeting_welcome">Welcome!</string>
 
 </resources>

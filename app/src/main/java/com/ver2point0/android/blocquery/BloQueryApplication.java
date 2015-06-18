@@ -18,6 +18,10 @@ public class BloQueryApplication extends Application {
         ParseUser.enableAutomaticUser();
         ParseACL defaultACL = new ParseACL();
 
+        // If you would like all objects to be private by default, remove this
+        // line.
+        defaultACL.setPublicReadAccess(true);
+
         ParseACL.setDefaultACL(defaultACL, true);
     }
 }

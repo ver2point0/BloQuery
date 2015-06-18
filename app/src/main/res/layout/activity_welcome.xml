@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical|center_horizontal"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_bottom_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -22,14 +22,14 @@
         android:gravity="center_vertical|center_horizontal">
 
         <TextView
-            android:id="@+id/tv_logo"
+            android:id="@+id/tv_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/app_name"
-            android:typeface="monospace"
+            android:text="@string/greeting_welcome"
             android:textSize="30sp"
             android:textColor="@color/text_icons"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -40,43 +40,14 @@
         android:orientation="vertical"
         android:gravity="center_vertical|center_horizontal">
 
-        <EditText
-            android:id="@+id/et_username"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/prompt_username"
             android:typeface="monospace"
-            android:inputType="text"
-            android:textColorHint="@color/text_icons"
-            android:textColor="@color/text_icons" />
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/prompt_password"
-            android:typeface="monospace"
-            android:inputType="textPassword"
             android:textColor="@color/text_icons"
-            android:textColorHint="@color/text_icons"/>
+            android:gravity="center_vertical|center_horizontal" />
 
-        <Button
-            android:id="@+id/bt_login"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_top_margin"
-            android:background="@color/primary_dark"
-            android:textColor="@color/text_icons"
-            android:textStyle="bold"
-            android:text="Login"
-            android:typeface="monospace"/>
     </LinearLayout>
 
     <LinearLayout
@@ -85,16 +56,17 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:gravity="bottom|center_horizontal">
+        android:gravity="center_vertical|center_horizontal">
 
         <Button
-            android:id="@+id/bt_signup"
+            android:id="@+id/bt_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:typeface="monospace"
             android:background="@color/accent"
-            android:textColor="@color/text_icons"/>
-    </LinearLayout>
+            android:typeface="monospace"
+            android:textColor="@color/text_icons"
+            android:textStyle="bold"
+            android:text="@string/logout" />
 
+    </LinearLayout>
 </LinearLayout>

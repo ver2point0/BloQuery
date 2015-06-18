@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
-import com.parse.ParseAnonymousUtils;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.ver2point0.android.blocquery.R;
@@ -30,31 +29,6 @@ public class BloQueryActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloquery);
-
-        // Determine whether the current user is an anonymous user
-        if (ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())) {
-            // If user is anonymous, send the user to BloQueryActivity.class
-            Intent intent = new Intent(BloQueryActivity.this,
-                    BloQueryActivity.class);
-            startActivity(intent);
-            finish();
-        } else {
-            // If current user is NOT anonymous user
-            // Get current user data from Parse.com
-            ParseUser currentUser = ParseUser.getCurrentUser();
-            if (currentUser != null) {
-                // Send logged in users to Welcome.class
-                Intent intent = new Intent(BloQueryActivity.this, Welcome.class);
-                startActivity(intent);
-                finish();
-            } else {
-                // Send user to LoginSignupActivity.class
-                Intent intent = new Intent(BloQueryActivity.this,
-                        BloQueryActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }
 
         mUserNameText = (EditText) findViewById(R.id.et_username);
         mPasswordText = (EditText) findViewById(R.id.et_password);
@@ -77,7 +51,7 @@ public class BloQueryActivity extends Activity {
                             public void done(ParseUser parseUser, ParseException e) {
                                 if (parseUser != null) {
                                     // if parseUser exists and authenticated, send parseUser to Welcome.class
-                                    Intent intent = new Intent(BloQueryActivity.this, Welcome.class);
+                                    Intent intent = new Intent(BloQueryActivity.this, WelcomeActivity.class);
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(), getString(R.string.login_success), Toast.LENGTH_SHORT).show();
                                     finish();
