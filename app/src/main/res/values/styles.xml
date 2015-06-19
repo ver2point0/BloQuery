@@ -8,7 +8,7 @@
     </style>
 
     <style name="Username">
-        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">12sp</item>
         <item name="android:lines">1</item>
         <item name="android:ellipsize">end</item>
@@ -16,7 +16,7 @@
     </style>
 
     <style name="Question">
-        <item name="android:textColor">@color/text_icons</item>
+        <item name="android:textColor">@color/text_primary</item>
         <item name="android:textSize">14sp</item>
         <item name="android:typeface">monospace</item>
     </style>
