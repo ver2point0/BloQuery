@@ -10,30 +10,26 @@ import android.widget.Toast;
 import com.parse.ParseUser;
 import com.ver2point0.android.blocquery.R;
 
-public class WelcomeActivity extends Activity{
+public class QuestionActivity extends Activity{
 
     private Button mLogOut;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_question);
 
         // Retrieve current user from Parse.com
         ParseUser currentUser = ParseUser.getCurrentUser();
-
         // Convert currentUser into String
         String userString = currentUser.getUsername().toString();
-
-        // Locate TextView in activity_welcome
-        TextView userText = (TextView) findViewById(R.id.tv_user);
-
+        // Locate TextView in activity_question
+        TextView userText = (TextView) findViewById(R.id.tv_username);
         // Set the currentUser String into TextView
-        userText.setText("You are logged in as " + userString);
+        userText.setText(userString);
 
-        // Locate Button in activity_welcome
+        // Locate Button in activity_question
         mLogOut = (Button) findViewById(R.id.bt_logout);
-
         // Logout Button Click Listener
         mLogOut.setOnClickListener(new View.OnClickListener() {
             @Override

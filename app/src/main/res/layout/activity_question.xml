@@ -19,39 +19,29 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:gravity="center_vertical|center_horizontal">
+        android:gravity="top">
 
         <TextView
-            android:id="@+id/tv_welcome"
-            android:layout_width="wrap_content"
+            style="@style/Username"
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/greeting_welcome"
-            android:textSize="30sp"
-            android:textColor="@color/text_icons"/>
+            />
+
+        <TextView
+            style="@style/Question"
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:text="@string/question_text"
+            android:lines="2"
+            android:ellipsize="end"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_two"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center_vertical|center_horizontal">
-
-        <TextView
-            android:id="@+id/tv_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:typeface="monospace"
-            android:textColor="@color/text_icons"
-            android:gravity="center_vertical|center_horizontal" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_three"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
