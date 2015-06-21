@@ -19,6 +19,7 @@ public class QuestionsActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
 
+
         // Retrieve current user from Parse.com
         ParseUser currentUser = ParseUser.getCurrentUser();
         // Convert currentUser into String
