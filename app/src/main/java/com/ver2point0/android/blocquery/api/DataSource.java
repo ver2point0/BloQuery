@@ -28,9 +28,9 @@ public class DataSource {
 
     void getQuestions() {
         // return an ArrayList
-        mFeeds.add(new QuestionsFeed("User 007"));
+        mFeeds.add(new QuestionsFeed("Username"));
         for (int i = 0; i < 10; i++) {
-            mItems.add(new QuestionsItem(String.valueOf(i), "What do you want to do with your life when it is all over?"));
+            mItems.add(new QuestionsItem("What do you want to do with your life when it is all over?"));
         }
 //
 //        ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");

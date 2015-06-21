@@ -6,12 +6,18 @@
     android:padding="@dimen/padding_margins"
     android:background="@color/primary">
 
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_activity_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
         <TextView
             style="@style/Username"
             android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"/>
+           />
 
         <TextView
             style="@style/Question"
@@ -20,9 +26,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_username"
             android:layout_marginTop="8dp"
-            android:text="@string/question_text"
             android:lines="2"
             android:ellipsize="end"/>
+    <!--android:text="@string/question_text"-->
 
         <Button
             android:id="@+id/bt_logout"
@@ -30,7 +36,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_question"
             android:layout_marginTop="8dp"
-            android:layout_centerInParent="true"
             android:background="@color/accent"
             android:typeface="monospace"
             android:textColor="@color/text_icons"
