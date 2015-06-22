@@ -1,35 +1,43 @@
 package com.ver2point0.android.blocquery.ui.adapter;
 
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ver2point0.android.blocquery.BloQueryApplication;
 import com.ver2point0.android.blocquery.R;
-import com.ver2point0.android.blocquery.api.DataSource;
 import com.ver2point0.android.blocquery.api.model.QuestionsFeed;
 import com.ver2point0.android.blocquery.api.model.QuestionsItem;
 
 public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.QuestionsAdapterViewHolder> {
 
+
+    private QuestionsFeed mQuestionsFeed;
+    private Context mContext;
+
+    public QuestionsAdapter(QuestionsFeed questionsFeed, Context context) {
+        mQuestionsFeed = questionsFeed;
+        mContext = context;
+    }
+
     @Override
     public QuestionsAdapterViewHolder onCreateViewHolder(ViewGroup viewGroup, int index) {
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_questions, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item_question, viewGroup, false);
         return new QuestionsAdapterViewHolder(inflate);
     }
 
     @Override
     public void onBindViewHolder(QuestionsAdapterViewHolder questionsAdapterViewHolder, int index) {
-        DataSource sharedDataSource = BloQueryApplication.getSharedDataSource();
-        questionsAdapterViewHolder.update(sharedDataSource.getFeeds().get(0), sharedDataSource.getItems().get(index));
+        questionsAdapterViewHolder.user.setText(mQuestionsFeed.getUser());
+        questionsAdapterViewHolder.questions.setText(mQuestionsFeed.get(index));
     }
 
     @Override
     public int getItemCount() {
-        return BloQueryApplication.getSharedDataSource().getItems().size();
+        return mQuestionsFeed.size();
     }
 
     class QuestionsAdapterViewHolder extends RecyclerView.ViewHolder {
@@ -45,8 +53,9 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
 
 
         void update(QuestionsFeed questionsFeed, QuestionsItem questionsItem) {
-            user.setText(questionsFeed.getUser());
-            questions.setText(questionsItem.getQuestion());
+
+//            user.setText(questionsFeed.getUser());
+//            questions.setText(questionsItem.getQuestion());
         }
     }
 }

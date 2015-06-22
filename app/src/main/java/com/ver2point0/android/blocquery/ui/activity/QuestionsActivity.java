@@ -5,12 +5,10 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.parse.ParseUser;
 import com.ver2point0.android.blocquery.R;
+import com.ver2point0.android.blocquery.api.model.QuestionsFeed;
 import com.ver2point0.android.blocquery.ui.adapter.QuestionsAdapter;
 
 public class QuestionsActivity extends Activity{
@@ -23,7 +21,8 @@ public class QuestionsActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
 
-        mQuestionsAdapter = new QuestionsAdapter();
+        QuestionsFeed feed = new QuestionsFeed("user");
+        mQuestionsAdapter = new QuestionsAdapter(feed, this);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_activity_question);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -38,18 +37,18 @@ public class QuestionsActivity extends Activity{
 //        // Set the currentUser String into TextView
 //        userText.setText(userString);
 
-        // Locate Button in activity_questions
-        mLogOut = (Button) findViewById(R.id.bt_logout);
-        // Logout Button Click Listener
-        mLogOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Logout current user
-                ParseUser.logOut();
-                Toast.makeText(getApplicationContext(), getString(R.string.logged_out), Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
+//        // Locate Button in activity_questions
+//        mLogOut = (Button) findViewById(R.id.bt_logout);
+//        // Logout Button Click Listener
+//        mLogOut.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Logout current user
+//                ParseUser.logOut();
+//                Toast.makeText(getApplicationContext(), getString(R.string.logged_out), Toast.LENGTH_SHORT).show();
+//                finish();
+//            }
+//        });
 
     }
 }
