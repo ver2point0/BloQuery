@@ -11,7 +11,8 @@
     <string name="prompt_username">Username</string>
     <string name="logged_out">Logged out</string>
     <string name="logout">Log Out</string>
-    <string name="greeting_welcome">Welcome!</string>
     <string name="successful_login">Successfully signed up, please log in</string>
+    <string name="question_text">What are you thinking about when you are in your house
+        alone eating junk food and drinking pop? Do you hate yourself for being a pig?</string>
 
 </resources>

@@ -21,7 +21,7 @@
         </activity>
         <activity android:name="com.ver2point0.android.blocquery.ui.activity.BloQueryActivity">
         </activity>
-        <activity android:name="com.ver2point0.android.blocquery.ui.activity.WelcomeActivity">
+        <activity android:name=".ui.activity.QuestionsActivity">
         </activity>
     </application>
 </manifest>
