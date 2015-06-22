@@ -1,6 +1,10 @@
 package com.ver2point0.android.blocquery.api;
 
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.ver2point0.android.blocquery.api.model.QuestionsFeed;
 import com.ver2point0.android.blocquery.api.model.QuestionsItem;
 
@@ -32,16 +36,16 @@ public class DataSource {
         for (int i = 0; i < 10; i++) {
             mItems.add(new QuestionsItem("What do you want to do with your life when it is all over?"));
         }
-//
-//        ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");
-//        query.orderByDescending("createdAt");
-//        query.setLimit(10);
-//        query.findInBackground(new FindCallback<ParseObject>() {
-//            public void done(List<ParseObject> questionsList, ParseException e) {
-//                // Display resulting items in Adapter
-//            }
-//        });
-//
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");
+        query.orderByDescending("createdAt");
+        query.setLimit(10);
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> questionsList, ParseException e) {
+                // Display resulting items in Adapter
+            }
+        });
+
     }
 
 
