@@ -38,24 +38,7 @@ public class QuestionsFeed {
         }
     }
 
-
-    public ArrayList<Question> getQuestions() throws ParseException {
-
-        final ArrayList<Question> questions = new ArrayList<Question>();
-
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");
-        query.orderByDescending("createdAt");
-        query.setLimit(10);
-        // BAD PRACTICE
-        List<ParseObject> questionsList = query.find();
-        if (questionsList != null) {
-            for (ParseObject parseObject : questionsList) {
-                questions.add(new Question(parseObject));
-            }
-        }
-
-
-       /*
+    /*
        *
        * use findInBackground() method to load questions into adapter
        *  might involve an interface() Listener
@@ -65,16 +48,25 @@ public class QuestionsFeed {
        *
        * */
 
+    public ArrayList<Question> getQuestions() throws ParseException {
+        final ArrayList<Question> questions = new ArrayList<Question>();
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");
+        query.orderByDescending("createdAt");
+        query.setLimit(10);
         query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
             public void done(List<ParseObject> questionsList, ParseException e) {
                 if (e == null) {
                     // if no error, good list
-                    if (questionsList != null) {
-                        for (ParseObject parseObject : questionsList) {
-                            questions.add(new Question(parseObject));
-                        }
+                    for (ParseObject parseObject : questionsList) {
+                        questions.add(new Question(parseObject));
                     }
-
+//                    if (questionsList != null) {
+//                        for (ParseObject parseObject : questionsList) {
+//                            questions.add(new Question(parseObject));
+//                        }
+//                    }
                 } else {
                     e.printStackTrace();
                 }
@@ -82,4 +74,14 @@ public class QuestionsFeed {
         });
         return questions;
     }
+
+    //        // BAD PRACTICE
+//        List<ParseObject> questionsList = query.find();
+//        if (questionsList != null) {
+//            for (ParseObject parseObject : questionsList) {
+//                questions.add(new Question(parseObject));
+//            }
+//        }
+
+
 }
