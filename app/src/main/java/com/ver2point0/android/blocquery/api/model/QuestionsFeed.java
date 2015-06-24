@@ -1,24 +1,30 @@
 package com.ver2point0.android.blocquery.api.model;
 
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionsFeed {
 
     private String mUser;
-    private ArrayList<String> mQuestions;
+    private ArrayList<Question> mQuestions;
 
     public QuestionsFeed(String user) {
         mUser = user;
-        mQuestions = new ArrayList<String>();
+        try {
+            mQuestions = getQuestions();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         getDummyData();
     }
 
-    public String getUser() {
-        return mUser;
-    }
-
-    public String get(int index) {
+    public Question get(int index) {
         return mQuestions.get(index);
     }
 
@@ -28,8 +34,52 @@ public class QuestionsFeed {
 
     public void getDummyData() {
         for (int i = 0; i < 10; i++) {
-            mQuestions.add("Question" + i);
+          //  mQuestions.add("Question" + i);
         }
     }
 
+
+    public ArrayList<Question> getQuestions() throws ParseException {
+
+        final ArrayList<Question> questions = new ArrayList<Question>();
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");
+        query.orderByDescending("createdAt");
+        query.setLimit(10);
+        // BAD PRACTICE
+        List<ParseObject> questionsList = query.find();
+        if (questionsList != null) {
+            for (ParseObject parseObject : questionsList) {
+                questions.add(new Question(parseObject));
+            }
+        }
+
+
+       /*
+       *
+       * use findInBackground() method to load questions into adapter
+       *  might involve an interface() Listener
+       *  QuestionsAdapter implements OnListLoadCompleteListener
+       *    onListLoadComplete(ArrayList<questions> ) method
+        *
+       *
+       * */
+
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> questionsList, ParseException e) {
+                if (e == null) {
+                    // if no error, good list
+                    if (questionsList != null) {
+                        for (ParseObject parseObject : questionsList) {
+                            questions.add(new Question(parseObject));
+                        }
+                    }
+
+                } else {
+                    e.printStackTrace();
+                }
+            }
+        });
+        return questions;
+    }
 }
