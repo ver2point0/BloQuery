@@ -3,7 +3,7 @@ package com.ver2point0.android.blocquery.api.model;
 
 import com.parse.ParseObject;
 
-public class Question {
+public class Question  {
 
     private String mQuestion;
     private String mUser;

@@ -21,7 +21,6 @@ public class QuestionsFeed {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        getDummyData();
     }
 
     public Question get(int index) {
@@ -30,12 +29,6 @@ public class QuestionsFeed {
 
     public int size() {
         return mQuestions.size();
-    }
-
-    public void getDummyData() {
-        for (int i = 0; i < 10; i++) {
-          //  mQuestions.add("Question" + i);
-        }
     }
 
     /*
@@ -74,14 +67,5 @@ public class QuestionsFeed {
         });
         return questions;
     }
-
-    //        // BAD PRACTICE
-//        List<ParseObject> questionsList = query.find();
-//        if (questionsList != null) {
-//            for (ParseObject parseObject : questionsList) {
-//                questions.add(new Question(parseObject));
-//            }
-//        }
-
 
 }
