@@ -51,7 +51,7 @@ public class BloQueryActivity extends Activity {
                             @Override
                             public void done(ParseUser parseUser, ParseException e) {
                                 if (parseUser != null) {
-                                    // if parseUser exists and authenticated, send parseUser to Questions.class
+                                    // if parseUser exists and authenticated, send parseUser to QuestionsActivity.class
                                     Intent intent = new Intent(BloQueryActivity.this, QuestionsActivity.class);
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(), getString(R.string.login_success), Toast.LENGTH_SHORT).show();

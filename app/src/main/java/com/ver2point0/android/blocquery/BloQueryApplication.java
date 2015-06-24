@@ -5,21 +5,19 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseUser;
-import com.ver2point0.android.blocquery.api.DataSource;
 
 public class BloQueryApplication extends Application {
 
     private static BloQueryApplication mSharedInstance;
-    private DataSource mDataSource;
+
 
     @Override
     public void onCreate() {
         super.onCreate();
         mSharedInstance = this;
-        mDataSource = new DataSource();
 
         // Parse initialization
-        Parse.initialize(this, "KbF3oiduq4h9bsIBfycOW5pS5pXWfFyJvdOaTx71", "VEWWrRR4pk35VY1eXFYr0WPuky4kQ8RziMIlI8QS");
+        Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_app_key));
 
         ParseUser.enableAutomaticUser();
         ParseACL defaultACL = new ParseACL();
@@ -34,12 +32,5 @@ public class BloQueryApplication extends Application {
         return mSharedInstance;
     }
 
-    public DataSource getDataSource() {
-        return mDataSource;
-    }
-
-    public static DataSource getSharedDataSource() {
-        return BloQueryApplication.getSharedInstance().getDataSource();
-    }
 
 }

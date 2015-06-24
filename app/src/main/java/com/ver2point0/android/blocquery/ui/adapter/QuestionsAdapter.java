@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ver2point0.android.blocquery.R;
+import com.ver2point0.android.blocquery.api.model.Question;
 import com.ver2point0.android.blocquery.api.model.QuestionsFeed;
-import com.ver2point0.android.blocquery.api.model.QuestionsItem;
 
 public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.QuestionsAdapterViewHolder> {
 
@@ -31,14 +31,18 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
 
     @Override
     public void onBindViewHolder(QuestionsAdapterViewHolder questionsAdapterViewHolder, int index) {
-        questionsAdapterViewHolder.user.setText(mQuestionsFeed.getUser());
-        questionsAdapterViewHolder.questions.setText(mQuestionsFeed.get(index));
+        questionsAdapterViewHolder.user.setText(mQuestionsFeed.get(index).getUser());
+        questionsAdapterViewHolder.questions.setText(mQuestionsFeed.get(index).getQuestion());
     }
 
     @Override
     public int getItemCount() {
         return mQuestionsFeed.size();
     }
+
+
+    // add a method to setListQuestions()
+        // callNotifyDataSetChanged();
 
     class QuestionsAdapterViewHolder extends RecyclerView.ViewHolder {
 
@@ -52,10 +56,10 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
         }
 
 
-        void update(QuestionsFeed questionsFeed, QuestionsItem questionsItem) {
+        void update(QuestionsFeed questionsFeed, Question question) {
 
 //            user.setText(questionsFeed.getUser());
-//            questions.setText(questionsItem.getQuestion());
+//            questions.setText(question.getQuestion());
         }
     }
 }
