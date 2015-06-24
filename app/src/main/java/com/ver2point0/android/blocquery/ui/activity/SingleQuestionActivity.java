@@ -4,4 +4,5 @@ import android.app.Activity;
 
 
 public class SingleQuestionActivity extends Activity {
+
 }

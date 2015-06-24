@@ -29,6 +29,7 @@ public class BloQueryActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_bloquery);
 
         mUserNameText = (EditText) findViewById(R.id.et_username);
