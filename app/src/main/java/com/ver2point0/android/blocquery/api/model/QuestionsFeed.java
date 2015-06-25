@@ -52,11 +52,6 @@ public class QuestionsFeed {
                     for (ParseObject parseObject : questionsList) {
                         questions.add(new Question(parseObject));
                     }
-//                    if (questionsList != null) {
-//                        for (ParseObject parseObject : questionsList) {
-//                            questions.add(new Question(parseObject));
-//                        }
-//                    }
                 } else {
                     e.printStackTrace();
                 }
@@ -64,5 +59,4 @@ public class QuestionsFeed {
         });
         return questions;
     }
-
 }
