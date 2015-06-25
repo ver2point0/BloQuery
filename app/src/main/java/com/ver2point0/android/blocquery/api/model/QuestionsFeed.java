@@ -32,13 +32,10 @@ public class QuestionsFeed {
     }
 
     /*
-       *
        * use findInBackground() method to load questions into adapter
        *  might involve an interface() Listener
        *  QuestionsAdapter implements OnListLoadCompleteListener
        *    onListLoadComplete(ArrayList<questions> ) method
-        *
-       *
        * */
 
     public ArrayList<Question> getQuestions() throws ParseException {
