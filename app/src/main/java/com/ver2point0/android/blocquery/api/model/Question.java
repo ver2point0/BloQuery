@@ -5,10 +5,11 @@ import com.parse.ParseObject;
 
 public class Question  {
 
-    private String mQuestion;
     private String mUser;
+    private String mQuestion;
     public static final String USER_KEY = "user";
     public static final String TITLE_KEY = "title";
+    public static final String EXTRA_SINGLE_QUESTION = "title";
 
     public Question(String question) {
         mQuestion = question;
@@ -17,7 +18,6 @@ public class Question  {
     public Question(ParseObject parseObject) {
        mUser = parseObject.getString(USER_KEY);
        mQuestion = parseObject.getString(TITLE_KEY);
-
     }
 
     public String getUser() {

@@ -5,16 +5,16 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Button;
 
 import com.ver2point0.android.blocquery.R;
 import com.ver2point0.android.blocquery.api.model.QuestionsFeed;
 import com.ver2point0.android.blocquery.ui.adapter.QuestionsAdapter;
 
-public class QuestionsActivity extends Activity{
+public class QuestionsActivity extends Activity {
 
-    private Button mLogOut;
+//    private Button mLogOut;
     private QuestionsAdapter mQuestionsAdapter;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -18,12 +18,15 @@
             <!--android:id="@+id/bt_logout"-->
             <!--android:layout_width="wrap_content"-->
             <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/tv_question"-->
             <!--android:layout_marginTop="8dp"-->
             <!--android:background="@color/accent"-->
             <!--android:typeface="monospace"-->
             <!--android:textColor="@color/text_icons"-->
             <!--android:textStyle="bold"-->
-            <!--android:text="@string/logout" />-->
+            <!--android:text="@string/action_logout"-->
+             <!--/>-->
+
+
+
 
 </RelativeLayout>

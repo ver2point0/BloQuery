@@ -31,16 +31,6 @@ public class QuestionsFeed {
         return mQuestions.size();
     }
 
-    /*
-       *
-       * use findInBackground() method to load questions into adapter
-       *  might involve an interface() Listener
-       *  QuestionsAdapter implements OnListLoadCompleteListener
-       *    onListLoadComplete(ArrayList<questions> ) method
-        *
-       *
-       * */
-
     public ArrayList<Question> getQuestions() throws ParseException {
         final ArrayList<Question> questions = new ArrayList<Question>();
 
@@ -55,11 +45,6 @@ public class QuestionsFeed {
                     for (ParseObject parseObject : questionsList) {
                         questions.add(new Question(parseObject));
                     }
-//                    if (questionsList != null) {
-//                        for (ParseObject parseObject : questionsList) {
-//                            questions.add(new Question(parseObject));
-//                        }
-//                    }
                 } else {
                     e.printStackTrace();
                 }
@@ -67,5 +52,4 @@ public class QuestionsFeed {
         });
         return questions;
     }
-
 }
