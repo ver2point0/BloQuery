@@ -16,5 +16,6 @@
         alone eating junk food and drinking pop? Do you hate yourself for being a pig?</string>
     <string name="parse_app_id">KbF3oiduq4h9bsIBfycOW5pS5pXWfFyJvdOaTx71</string>
     <string name="parse_app_key">VEWWrRR4pk35VY1eXFYr0WPuky4kQ8RziMIlI8QS</string>
+    <string name="activity_single_question">SingleQuestionActivity</string>
 
 </resources>

@@ -15,6 +15,7 @@ public class QuestionsActivity extends Activity {
 //    private Button mLogOut;
     private QuestionsAdapter mQuestionsAdapter;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

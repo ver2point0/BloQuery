@@ -31,13 +31,6 @@ public class QuestionsFeed {
         return mQuestions.size();
     }
 
-    /*
-       * use findInBackground() method to load questions into adapter
-       *  might involve an interface() Listener
-       *  QuestionsAdapter implements OnListLoadCompleteListener
-       *    onListLoadComplete(ArrayList<questions> ) method
-       * */
-
     public ArrayList<Question> getQuestions() throws ParseException {
         final ArrayList<Question> questions = new ArrayList<Question>();
 
