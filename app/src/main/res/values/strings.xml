@@ -1,21 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- Application name-->
     <string name="app_name">BloQuery</string>
 
-    <!-- Strings related to BloQuery login activity -->
-    <string name="login_success">Successfully Logged in</string>
-    <string name="user_not_exist">No such user exist, please signup</string>
-    <string name="complete_signup_form">Please complete the sign up form</string>
-    <string name="signup_error">Sign up Error</string>
-    <string name="prompt_password">Password</string>
-    <string name="prompt_username">Username</string>
-    <string name="logged_out">Logged out</string>
-    <string name="action_logout">Log Out</string>
-    <string name="successful_login">Successfully signed up, please log in</string>
-    <string name="question_text">What are you thinking about when you are in your house
-        alone eating junk food and drinking pop? Do you hate yourself for being a pig?</string>
+    <!-- App Id & Client Key-->
     <string name="parse_app_id">KbF3oiduq4h9bsIBfycOW5pS5pXWfFyJvdOaTx71</string>
-    <string name="parse_app_key">VEWWrRR4pk35VY1eXFYr0WPuky4kQ8RziMIlI8QS</string>
-    <string name="activity_single_question">SingleQuestionActivity</string>
+    <string name="parse_client_key">VEWWrRR4pk35VY1eXFYr0WPuky4kQ8RziMIlI8QS</string>
+
+    <string name="text_signup">Create Account</string>
+    <string name="text_login_failed">Username or Password incorrect</string>
+
+    <!-- Text hints -->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_firstname">First Name</string>
+    <string name="hint_lastname">Last Name</string>
+
+    <!-- Button text -->
+    <string name="button_login">Login</string>
+    <string name="button_signup">Sign Up</string>
+
+    <!-- Menu Actions -->
+    <string name="action_logout">Log Out</string>
 
 </resources>

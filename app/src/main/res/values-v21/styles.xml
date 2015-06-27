@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+    <style name="AppTheme" parent="android:Theme.Material">
 
         <!-- Main theme colors -->
 
@@ -13,5 +13,4 @@
         <item name="android:windowBackground">@color/primary_light</item>
 
     </style>
-
 </resources>

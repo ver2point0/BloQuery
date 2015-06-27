@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@color/primary"
+    android:padding="@dimen/activity_padding">
+
+    <LinearLayout
+        android:id="@+id/ll_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".75"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:typeface="monospace"
+        android:textColor="@color/text_icons"/>
+
+        <TextView
+            android:id="@+id/tv_login_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_login_failed"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/text_secondary"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".6"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal">
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:hint="@string/hint_username"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"
+            android:typeface="monospace"
+            android:textColor="@color/text_icons"
+            android:textColorHint="@color/text_icons"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/hint_password"
+            android:typeface="monospace"
+            android:inputType="textPassword"
+            android:textColor="@color/text_icons"
+            android:textColorHint="@color/text_icons"/>
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/primary_dark"
+            android:textColor="@color/text_icons"
+            android:textStyle="bold"
+            android:text="@string/button_login"
+            android:typeface="monospace"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="New to BloQuery?"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:typeface="monospace"-->
+            <!--android:textColor="@color/text_icons"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_three"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".75"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal">
+
+        <Button
+            android:id="@+id/bt_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_signup"
+            android:typeface="monospace"
+            android:background="@color/accent"
+            android:textColor="@color/text_icons"/>
+    </LinearLayout>
+
+</LinearLayout>

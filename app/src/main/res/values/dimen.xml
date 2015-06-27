@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!-- Default screen margin, top, right, bottom, left -->
-    <dimen name="padding_margins">16dp</dimen>
-
-
-</resources>
