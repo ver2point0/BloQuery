@@ -44,10 +44,7 @@ public class SignUpFragment extends Fragment {
                 String password = mPassword.getText().toString();
 
                 // fields cannot be null
-                if (((username != null) || (username != "")) &&
-                        ((firstname != null) || (firstname != "")) &&
-                        ((lastname != null) || (lastname != "")) &&
-                        (password != null || (password != ""))) {
+                if ((username != null) && (firstname != null) && (password != null) && (lastname != null)) {
 
                     // create new parse user
                     ParseUser parseUser = new ParseUser();
@@ -76,5 +73,7 @@ public class SignUpFragment extends Fragment {
             }
         });
         return view;
-    }
-}
+
+    } // end method() onCreateView()
+
+} // end class signup fragment
