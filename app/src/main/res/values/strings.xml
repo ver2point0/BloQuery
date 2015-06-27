@@ -15,15 +15,21 @@
     <string name="hint_password">Password</string>
     <string name="hint_firstname">First Name</string>
     <string name="hint_lastname">Last Name</string>
-    <string name="hint_question">question</string>
+    <string name="hint_question">Type your question</string>
 
     <!-- Button text -->
     <string name="button_login">Login</string>
     <string name="button_signup">Sign Up</string>
+    <string name="button_submit">Submit</string>
+    <string name="button_cancel">Cancel</string>
 
     <!-- Menu Actions -->
     <string name="action_logout">Log Out</string>
     <string name="action_new_question">New Question</string>
     <string name="action_new_answer">New Answer</string>
+
+    <string name="ask_new_question">Ask New Question</string>
+
+
 
 </resources>

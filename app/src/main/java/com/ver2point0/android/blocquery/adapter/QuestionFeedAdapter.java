@@ -33,7 +33,7 @@ public class QuestionFeedAdapter extends ArrayAdapter<ParseObject> {
 
         if (questionParseObject != null) {
             TextView textView = (TextView) view.findViewById(R.id.tv_question);
-            textView.setText(questionParseObject.getString("Question"));
+            textView.setText(questionParseObject.getString("question"));
         }
         return view;
     }

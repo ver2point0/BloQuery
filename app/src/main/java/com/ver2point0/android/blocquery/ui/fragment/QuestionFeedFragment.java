@@ -87,18 +87,18 @@ public class QuestionFeedFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == R.id.action_new_question) {
             NewQuestionDialogFragment newQuestionDialogFragment = new NewQuestionDialogFragment();
-            newQuestionDialogFragment.setListener(new NewQuestionDialogFragment().NewQuestionListener() {
+            newQuestionDialogFragment.setListener(new NewQuestionDialogFragment.NewQuestionListener() {
                 @Override
                 public void onNewQuestionConfirm(DialogFragment dialogFragment, String question) {
-                    ParseObject question = new ParseObject("Question");
-                    question.put("question", question);
-                    question.put("user", ParseUser.getCurrentUser());
-                    question.saveInBackground();
+                    ParseObject parseObject = new ParseObject("Question");
+                    parseObject.put("question", question);
+                    parseObject.put("user", ParseUser.getCurrentUser());
+                    parseObject.saveInBackground();
 
-                    mQuestionFeedAdapter.add(question);
+                    mQuestionFeedAdapter.add(parseObject);
                 }
             });
-            dialogFragment.show(getFragmentManager(), "NewQuestionDialog");
+            newQuestionDialogFragment.show(getFragmentManager(), "NewQuestionDialog");
             return true;
         } else {
             return super.onOptionsItemSelected(menuItem);
