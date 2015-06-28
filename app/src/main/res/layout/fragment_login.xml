@@ -83,15 +83,6 @@
             android:text="@string/button_login"
             android:typeface="monospace"/>
 
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="New to BloQuery?"-->
-            <!--android:gravity="center_horizontal"-->
-            <!--android:typeface="monospace"-->
-            <!--android:textColor="@color/text_icons"/>-->
-
     </LinearLayout>
 
     <LinearLayout
