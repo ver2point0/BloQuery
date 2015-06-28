@@ -15,8 +15,8 @@
     <string name="hint_password">Password</string>
     <string name="hint_firstname">First Name</string>
     <string name="hint_lastname">Last Name</string>
-    <string name="hint_question">Don't be shy. What would you like to know?</string>
-    <string name="hint_answer">You'll be happy that you educated someone today.</string>
+    <string name="hint_question">Type your question</string>
+    <string name="hint_answer">Type your answer</string>
 
     <!-- Button text -->
     <string name="button_login">Login</string>
@@ -30,6 +30,7 @@
     <string name="action_new_answer">New Answer</string>
 
     <string name="ask_new_question">Ask New Question</string>
+    <string name="submit_an_answer">Submit An Answer</string>
 
 
 

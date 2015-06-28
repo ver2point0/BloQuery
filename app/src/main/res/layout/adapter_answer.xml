@@ -47,22 +47,21 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp">
 
-        <!-- Change back tv_user's layout width to wrap_content if it looks bad-->
         <TextView
             android:id="@+id/tv_user_aa"
             android:typeface="monospace"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:textColor="@color/text_icons"/>
+            android:textColor="@color/text_icons"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tv_answer_aa"
             android:typeface="monospace"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_icons"/>
+            android:textColor="@color/text_primary"/>
 
     </LinearLayout>
 </LinearLayout>
