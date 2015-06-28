@@ -6,9 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.parse.ParseUser;
-import com.ver2point0.android.bloquery.R;
 import com.ver2point0.android.blocquery.ui.fragment.LogInFragment;
 import com.ver2point0.android.blocquery.ui.fragment.QuestionFeedFragment;
+import com.ver2point0.android.bloquery.R;
 
 public class BloQueryActivity extends Activity {
 

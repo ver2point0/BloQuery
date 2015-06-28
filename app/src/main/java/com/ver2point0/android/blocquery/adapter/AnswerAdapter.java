@@ -30,16 +30,15 @@ public class AnswerAdapter extends ArrayAdapter<ParseObject> {
         }
 
         // parse object at current position
-        final ParseObject parseObjectAnswer = mAnswersList.get(position);
+        ParseObject parseObjectAnswer = mAnswersList.get(position);
 
         if (mAnswersList != null) {
 
             TextView userTextView = (TextView) view.findViewById(R.id.tv_user_aa);
             TextView answerTextView = (TextView) view.findViewById(R.id.tv_answer_aa);
-            final TextView pointsTextView = (TextView) view.findViewById(R.id.tv_points);
+            TextView pointsTextView = (TextView) view.findViewById(R.id.tv_points);
             ImageButton upVoteButton = (ImageButton) view.findViewById(R.id.ib_vote_up);
             ImageButton downVoteButton = (ImageButton) view.findViewById(R.id.ib_vote_down);
-
 
             // get the user
             ParseObject parseObjectUser = parseObjectAnswer.getParseUser("user");
@@ -48,7 +47,6 @@ public class AnswerAdapter extends ArrayAdapter<ParseObject> {
             userTextView.setText(parseObjectUser.getString("first_name") + " " + parseObjectUser.getString("last_name").substring(0, 1));
             answerTextView.setText(parseObjectAnswer.getString("answer"));
             pointsTextView.setText(String.valueOf(parseObjectAnswer.getInt("points")));
-
 
             // set button listeners
             upVoteButton.setOnClickListener(new View.OnClickListener() {

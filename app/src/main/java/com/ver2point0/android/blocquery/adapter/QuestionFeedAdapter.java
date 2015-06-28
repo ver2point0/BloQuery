@@ -2,7 +2,6 @@ package com.ver2point0.android.blocquery.adapter;
 
 
 import android.content.Context;
-import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +39,6 @@ public class QuestionFeedAdapter extends ArrayAdapter<ParseObject> {
             ParseObject parseObjectUser = questionParseObject.getParseUser("user");
 
             // set text view
-            userTextView.setPaintFlags(userTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
             userTextView.setText(parseObjectUser.getString("first_name") + " " + parseObjectUser.getString("last_name").substring(0, 1));
             questionTextView.setText(questionParseObject.getString("question"));
 
