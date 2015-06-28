@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/et_new_question_dialog"
+        android:id="@+id/et_new_answer_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
@@ -16,7 +16,7 @@
         android:layout_marginTop="@dimen/activity_padding"
         android:layout_marginRight="@dimen/activity_padding"
         android:layout_marginLeft="@dimen/activity_padding"
-        android:hint="@string/hint_question"
+        android:hint="@string/hint_answer"
         android:textColorHint="@color/text_icons"
         android:minHeight="250dp"
         android:typeface="monospace"/>

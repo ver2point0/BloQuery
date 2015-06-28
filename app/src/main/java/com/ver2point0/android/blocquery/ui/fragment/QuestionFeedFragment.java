@@ -49,11 +49,14 @@ public class QuestionFeedFragment extends Fragment {
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");
         query.orderByDescending("createdAt");
+        query.include("user");
         query.setLimit(10);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> parseObjectsList, ParseException e) {
                 if (e == null) {
+                    // replace questions with result
+                    mQuestions.clear();
                     mQuestions.addAll(parseObjectsList);
                     mQuestionFeedAdapter.notifyDataSetChanged();
                 } else {
@@ -70,6 +73,14 @@ public class QuestionFeedFragment extends Fragment {
                 if (questionFragment == null) {
                     questionFragment = new QuestionFragment();
                 }
+
+                // load question into view
+                questionFragment.setQuestion(singleQuestion);
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.container, questionFragment, "QuestionFragment")
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         return view;

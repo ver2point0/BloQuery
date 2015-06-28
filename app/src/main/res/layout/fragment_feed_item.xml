@@ -5,11 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tv_user_fi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:typeface="monospace"
+        android:textColor="@color/text_icons"/>
 
     <TextView
-        android:id="@+id/tv_question"
+        android:id="@+id/tv_question_fi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/activity_padding"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:typeface="monospace"
+        android:textColor="@color/text_primary"
         android:background="@color/primary"/>
+
 </LinearLayout>
