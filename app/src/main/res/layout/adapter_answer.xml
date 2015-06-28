@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/ib_vote_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:drawable/arrow_up_float"/>
+
+        <TextView
+            android:id="@+id/tv_points"
+            android:typeface="monospace"
+            android:textColor="@color/text_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <ImageButton
+            android:id="@+id/ib_vote_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/arrow_down_float"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/primary"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <!-- Change back tv_user's layout width to wrap_content if it looks bad-->
+        <TextView
+            android:id="@+id/tv_user_aa"
+            android:typeface="monospace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_icons"/>
+
+        <TextView
+            android:id="@+id/tv_answer_aa"
+            android:typeface="monospace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_icons"/>
+
+    </LinearLayout>
+</LinearLayout>

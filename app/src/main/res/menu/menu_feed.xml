@@ -6,7 +6,7 @@
     <item
         android:id="@+id/action_new_question"
         android:title="@string/action_new_question"
-        android:icon="@drawable/message_48"
+        android:icon="@android:drawable/ic_menu_add"
         app:showAsAction="always"
         />
 </menu>
