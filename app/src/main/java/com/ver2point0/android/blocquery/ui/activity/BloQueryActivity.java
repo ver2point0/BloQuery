@@ -29,7 +29,7 @@ public class BloQueryActivity extends AppCompatActivity {
 //        Move the logic to visify or invisify your Toolbar to onResume
 //        Use flags for which fragment you're showing, and then just check if you're currently showing the login
 //        If you are, make Toolbar gone
-//        If you aren't, make it viisble
+//        If you aren't, make it visible
 
        // check whether a user is logged in
         ParseUser parseUser = ParseUser.getCurrentUser();
