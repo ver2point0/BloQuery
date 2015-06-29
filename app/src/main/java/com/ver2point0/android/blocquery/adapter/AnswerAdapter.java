@@ -30,13 +30,13 @@ public class AnswerAdapter extends ArrayAdapter<ParseObject> {
         }
 
         // parse object at current position
-        ParseObject parseObjectAnswer = mAnswersList.get(position);
+        final ParseObject parseObjectAnswer = mAnswersList.get(position);
 
         if (mAnswersList != null) {
 
             TextView userTextView = (TextView) view.findViewById(R.id.tv_user_aa);
             TextView answerTextView = (TextView) view.findViewById(R.id.tv_answer_aa);
-            TextView pointsTextView = (TextView) view.findViewById(R.id.tv_points);
+            final TextView pointsTextView = (TextView) view.findViewById(R.id.tv_points);
             ImageButton upVoteButton = (ImageButton) view.findViewById(R.id.ib_vote_up);
             ImageButton downVoteButton = (ImageButton) view.findViewById(R.id.ib_vote_down);
 

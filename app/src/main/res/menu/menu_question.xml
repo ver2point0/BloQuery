@@ -7,6 +7,6 @@
         android:id="@+id/action_new_answer"
         android:title="@string/action_new_answer"
         android:icon="@android:drawable/ic_menu_add"
-        app:showAsAction="always"
-        />
+        app:showAsAction="always"/>
+
 </menu>

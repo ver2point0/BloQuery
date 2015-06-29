@@ -1,7 +1,8 @@
 package com.ver2point0.android.blocquery.ui.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -10,22 +11,37 @@ import com.ver2point0.android.blocquery.ui.fragment.LogInFragment;
 import com.ver2point0.android.blocquery.ui.fragment.QuestionFeedFragment;
 import com.ver2point0.android.bloquery.R;
 
-public class BloQueryActivity extends Activity {
+public class BloQueryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloquery);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+//        1) make your Toolbar a member variable of BloqueryActivity
+//        2) create method called makeToolbarVisible
+//        3) In your fragment, cast getActivity as your BloqueryActiivty
+//        Call the makeToolbarVisible method from Fragment
+//        If you have any problems, let me know
+
+//        Move the logic to visify or invisify your Toolbar to onResume
+//        Use flags for which fragment you're showing, and then just check if you're currently showing the login
+//        If you are, make Toolbar gone
+//        If you aren't, make it viisble
 
        // check whether a user is logged in
         ParseUser parseUser = ParseUser.getCurrentUser();
         if (parseUser != null) {
+            //toolbar.setVisibility(View.VISIBLE);
             // show feed QuestionFeedFragment
             getFragmentManager()
                     .beginTransaction()
                     .add(R.id.container, new QuestionFeedFragment(), "QuestionFeedFragment")
                     .commit();
         } else {
+            //toolbar.setVisibility(View.GONE);
             // show LogInFragment
             getFragmentManager()
                     .beginTransaction()
