@@ -17,6 +17,7 @@
     <string name="hint_lastname">Last Name</string>
     <string name="hint_question">Type your question</string>
     <string name="hint_answer">Type your answer</string>
+    <string name="hint_description">Tell us about you</string>
 
     <!-- Button text -->
     <string name="button_login">Login</string>
@@ -33,8 +34,5 @@
     <string name="submit_an_answer">Submit An Answer</string>
     <string name="update_profile_pic">Update Profile Picture</string>
     <string name="edit_description">Edit Profile Description</string>
-
-
-
 
 </resources>

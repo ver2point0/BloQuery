@@ -8,8 +8,8 @@
     <com.ver2point0.android.blocquery.view.SquareImageView
         android:id="@+id/iv_profile_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"/>
+        android:layout_height="250dp"
+        android:layout_margin="16dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:textSize="18sp"
+            android:typeface="monospace"
             android:layout_alignParentLeft="true"/>
 
         <ImageButton
@@ -38,6 +39,7 @@
         android:id="@+id/tv_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:typeface="monospace"
         android:layout_margin="10dp"/>
 
     <EditText
@@ -45,6 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:typeface="monospace"
+        android:hint="@string/hint_description"
         android:visibility="gone"/>
 
     <LinearLayout
@@ -68,7 +72,6 @@
             android:layout_height="wrap_content"
             android:typeface="monospace"
             android:text="@string/button_save"/>
-
 
     </LinearLayout>
 </LinearLayout>
