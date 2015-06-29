@@ -21,16 +21,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:textSize="18sp"
-            android:textColor="@color/text_icons"
             android:layout_alignParentLeft="true"/>
 
-    <ImageButton
-        android:id="@+id/ib_edit_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
-        android:visibility="invisible"
-        android:layout_alignParentRight="true"/>
+        <ImageButton
+            android:id="@+id/ib_edit_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"/>
+
     </RelativeLayout>
 
 
@@ -60,7 +60,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:typeface="monospace"
-            android:textColor="@color/text_icons"
             android:text="@string/button_cancel"/>
 
         <Button
@@ -68,7 +67,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:typeface="monospace"
-            android:textColor="@color/text_icons"
             android:text="@string/button_save"/>
 
 
