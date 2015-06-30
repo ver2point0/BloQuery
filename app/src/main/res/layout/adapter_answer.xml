@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@android:drawable/ic_input_add"/>
+            android:background="@drawable/ic_up_vote_points"/>
 
         <TextView
             android:id="@+id/tv_points"
@@ -59,7 +59,7 @@
             android:id="@+id/ib_vote_down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_delete"
+            android:background="@drawable/ic_down_vote_points"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
