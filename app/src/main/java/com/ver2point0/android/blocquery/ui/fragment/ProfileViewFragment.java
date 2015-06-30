@@ -106,7 +106,7 @@ public class ProfileViewFragment extends Fragment {
                 });
             } else {
                 // get a generic profile picture
-                mProfilePicture.setImageResource(R.mipmap.ic_launcher);
+                mProfilePicture.setImageResource(R.drawable.ic_generic_profile);
             }
 
             // menu
@@ -202,19 +202,4 @@ public class ProfileViewFragment extends Fragment {
             setProfilePicture(image);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 } // end class ProfileViewFragment
