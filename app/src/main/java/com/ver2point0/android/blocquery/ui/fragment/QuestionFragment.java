@@ -67,6 +67,7 @@ public class QuestionFragment extends Fragment {
             ParseQuery<ParseObject> query = ParseQuery.getQuery("Answer");
             query.whereEqualTo("question", mQuestion);
             query.include("user");
+            query.orderByDescending("points");
             query.findInBackground(new FindCallback<ParseObject>() {
                 @Override
                 public void done(List<ParseObject> list, ParseException e) {
