@@ -26,6 +26,6 @@
         android:layout_marginRight="10dp"
         android:typeface="monospace"
         android:textColor="@color/text_primary"
-        android:background="@color/primary"/>
+        android:background="@color/primary_dark"/>
 
 </LinearLayout>
