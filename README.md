@@ -14,3 +14,4 @@ Uses Parse's cloud service to build a Quora replica that allows users to ask and
 | ------- |
 | ![rsz_bloqueryprofile](https://cloud.githubusercontent.com/assets/12492121/9129903/40e75838-3cab-11e5-8172-2b723d965553.png)        |
 
+[![ghit.me](https://ghit.me/badge.svg?repo=ver2point0/BloQuery)](https://ghit.me/repo/ver2point0/BloQuery)
